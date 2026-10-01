@@ -21,7 +21,7 @@ main{max-width:1180px;margin:auto;padding:24px 20px 70px} .tabpage{display:none}
 .korean{font-size:18px;background:#fafafa;border:1px solid var(--line);padding:13px;border-radius:10px}
 .micro{color:var(--muted);font-size:13px;margin:9px 0} .copybtn,.primary{background:var(--accent);color:white;border:0;border-radius:9px;padding:9px 12px;font-weight:700;cursor:pointer}
 textarea{width:100%;min-height:170px;border:1px solid var(--line);border-radius:10px;padding:12px;font:inherit}
-.small{font-size:13px;color:var(--muted)}
+.timer{font-size:36px;font-weight:900;text-align:center;margin:10px} .small{font-size:13px;color:var(--muted)}
 @media(max-width:650px){nav button{flex:1 1 45%} .korean{font-size:16px}}
 footer{border-top:1px solid var(--line);padding:20px;color:var(--muted);font-size:12px}
 </style>
@@ -44,20 +44,102 @@ footer{border-top:1px solid var(--line);padding:20px;color:var(--muted);font-siz
 <section id="home" class="tabpage active">
 <div class="hero">
 <h2>🎥 Built for your vlog — not for homework</h2>
-<p>Choose a topic, see the exact Sogang grammar to use, read the complete Korean script, learn the vocabulary, then record your own version.</p>
-<p><b>Every script is original speaking practice.</b> The textbook is used as the grammar/vocabulary basis; the vlog scripts are an extension created for speaking practice.</p>
+<p>Choose a topic, see the exact Sogang grammar to use, read the complete Korean script, learn the vocabulary, then record your own version[cite: 2].</p>
+<p><b>Every script is original speaking practice.</b> The textbook is used as the grammar/vocabulary basis; the vlog scripts are an extension created for speaking practice[cite: 2].</p>
+</div>
+<div class="grid">
+<div class="card"><h3>📝 90+ scripts</h3><p>Each topic has a complete Korean script instead of only a topic title[cite: 2].</p></div>
+<div class="card"><h3>🧩 Grammar attached</h3><p>Every script tells you exactly which grammar patterns to practice[cite: 2].</p></div>
+<div class="card"><h3>🏠 Home life</h3><p>Vocabulary for rooms, furniture, cleaning, studying, cooking and daily routines[cite: 2].</p></div>
+<div class="card"><h3>🍛 Indian cooking</h3><p>Ingredients, spices, dishes and cooking actions for real home-food vlogs[cite: 2].</p></div>
+<div class="card"><h3>📍 Bhopal</h3><p>Local-life vocabulary for making “my Bhopal” videos[cite: 2].</p></div>
+<div class="card"><h3>🎬 Script Builder</h3><p>Create a personal script from the same grammar and vocabulary system[cite: 2].</p></div>
 </div>
 </section>
 
 <section id="scripts" class="tabpage">
-<h2>🎬 Vlog Scripts</h2>
-<input id="scriptSearch" class="search" placeholder="Search: cooking, home, Bhopal, -고 있다…">
+<h2>🎬 90+ Actual Vlog Scripts</h2>
+<p class="small">Search by topic or grammar. Each card contains: topic → grammar → complete Korean script → key vocabulary[cite: 2].</p>
+<input id="scriptSearch" class="search" placeholder="Search: cooking, home, Bhopal, -고 있다, travel…">
 <div id="scriptList">
-<article class="script-card" data-search="My morning at home -고 있다">
+<article class="script-card" data-search="My morning at home -고 있다 -(으)ㄴ 다음에 -(으)려고 안녕하세요. 오늘은 집에서 보내는 제 아침을 보여 드릴게요. 저는 아침에 일어나서 먼저 세수를 해요. 세수를 한 다음에 물을 마시고 아침을 먹어요. 요즘은 한국어를 공부하고 있어서 아침에도 단어를 외우고 있어요. 한국어를 연습하려고 매일 조금씩 말해요.">
  <div class="num">VLOG 01</div>
  <h3>My morning at home</h3>
  <div class="grammar"><b>Use grammar:</b> -고 있다 · -(으)ㄴ 다음에 · -(으)려고</div>
- <div class="korean">안녕하세요. 오늘은 집에서 보내는 제 아침을 보여 드릴게요. 저는 아침에 일어나서 먼저 세수를 해요[cite: 2].</div>
+ <div class="korean">안녕하세요. 오늘은 집에서 보내는 제 아침을 보여 드릴게요. 저는 아침에 일어나서 먼저 세수를 해요. 세수를 한 다음에 물을 마시고 아침을 먹어요. 요즘은 한국어를 공부하고 있어서 아침에도 단어를 외우고 있어요. 한국어를 연습하려고 매일 조금씩 말해요[cite: 2].</div>
+ <div class="micro"><b>Key vocabulary:</b> 공부하고 · 다음에 · 단어를 · 드릴게요 · 마시고 · 말해요 · 매일 · 먹어요 · 먼저 · 물을 · 보내는 · 보여 · 세수를 · 아침에</div>
+ <button class="copybtn" onclick="copyText(this)">Copy Korean script</button>
+</article>
+<article class="script-card" data-search="Cleaning my room -고 있다 -아/어서 -(으)니까 오늘은 방을 청소하고 있어요. 방이 조금 지저분해서 먼저 책상부터 정리해요. 청소를 하니까 기분도 좋아져요. 깨끗한 방에서 공부하면 더 편해서 자주 청소하려고 해요.">
+ <div class="num">VLOG 02</div>
+ <h3>Cleaning my room</h3>
+ <div class="grammar"><b>Use grammar:</b> -고 있다 · -아/어서 · -(으)니까</div>
+ <div class="korean">오늘은 방을 청소하고 있어요. 방이 조금 지저분해서 먼저 책상부터 정리해요. 청소를 하니까 기분도 좋아져요. 깨끗한 방에서 공부하면 더 편해서 자주 청소하려고 해요[cite: 2].</div>
+ <div class="micro"><b>Key vocabulary:</b> 공부하면 · 기분도 · 깨끗한 · 더 · 먼저 · 방에서 · 방을 · 방이 · 오늘은 · 있어요 · 자주 · 정리해요 · 조금 · 좋아져요</div>
+ <button class="copybtn" onclick="copyText(this)">Copy Korean script</button>
+</article>
+<article class="script-card" data-search="My study corner -는 것 -고 있다 -아/어도 되다 여기가 제가 공부하는 곳이에요. 저는 이 책상에서 한국어를 공부하는 것을 좋아해요. 지금도 문법을 공부하고 있어요. 여기에서는 조용히 공부해도 돼요. 그래서 오래 앉아 있을 때가 많아요.">
+ <div class="num">VLOG 03</div>
+ <h3>My study corner</h3>
+ <div class="grammar"><b>Use grammar:</b> -는 것 · -고 있다 · -아/어도 되다</div>
+ <div class="korean">여기가 제가 공부하는 곳이에요. 저는 이 책상에서 한국어를 공부하는 것을 좋아해요. 지금도 문법을 공부하고 있어요. 여기에서는 조용히 공부해도 돼요. 그래서 오래 앉아 있을 때가 많아요[cite: 2].</div>
+ <div class="micro"><b>Key vocabulary:</b> 것을 · 곳이에요 · 공부하고 · 공부하는 · 공부해도 · 그래서 · 돼요 · 때가 · 많아요 · 문법을 · 앉아 · 여기가 · 여기에서는 · 오래</div>
+ <button class="copybtn" onclick="copyText(this)">Copy Korean script</button>
+</article>
+<article class="script-card" data-search="Making tea at home -고 있다 -(으)ㄴ 다음에 -(으)려고 지금 차를 만들고 있어요. 먼저 물을 끓인 다음에 컵에 차를 넣어요. 조금 쉬려고 따뜻한 차를 만들었어요. 집에서 차를 마시면 마음이 편해지는 것 같아요.">
+ <div class="num">VLOG 04</div>
+ <h3>Making tea at home</h3>
+ <div class="grammar"><b>Use grammar:</b> -고 있다 · -(으)ㄴ 다음에 · -(으)려고</div>
+ <div class="korean">지금 차를 만들고 있어요. 먼저 물을 끓인 다음에 컵에 차를 넣어요. 조금 쉬려고 따뜻한 차를 만들었어요. 집에서 차를 마시면 마음이 편해지는 것 같아요[cite: 2].</div>
+ <div class="micro"><b>Key vocabulary:</b> 같아요 · 것 · 끓인 · 넣어요 · 다음에 · 따뜻한 · 마시면 · 마음이 · 만들고 · 만들었어요 · 먼저 · 물을 · 쉬려고 · 있어요</div>
+ <button class="copybtn" onclick="copyText(this)">Copy Korean script</button>
+</article>
+<article class="script-card" data-search="Indian breakfast -고 있다 -아/어서 -(으)니까 오늘 아침에는 인도 음식을 만들고 있어요. 먼저 재료를 준비하고 팬을 데워요. 아침을 먹어야 하니까 조금 일찍 요리해요. 집에서 직접 만들면 신선해서 좋아요.">
+ <div class="num">VLOG 05</div>
+ <h3>Indian breakfast</h3>
+ <div class="grammar"><b>Use grammar:</b> -고 있다 · -아/어서 · -(으)니까</div>
+ <div class="korean">오늘 아침에는 인도 음식을 만들고 있어요. 먼저 재료를 준비하고 팬을 데워요. 아침을 먹어야 하니까 조금 일찍 요리해요. 집에서 직접 만들면 신선해서 좋아요[cite: 2].</div>
+ <div class="micro"><b>Key vocabulary:</b> 데워요 · 만들고 · 만들면 · 먹어야 · 먼저 · 신선해서 · 아침에는 · 아침을 · 오늘 · 요리해요 · 음식을 · 인도 · 일찍 · 있어요</div>
+ <button class="copybtn" onclick="copyText(this)">Copy Korean script</button>
+</article>
+<article class="script-card" data-search="Making dal -고 있다 -은/ㄴ 다음에 -아서/어서 오늘은 달을 만들고 있어요. 먼저 렌틸을 씻은 다음에 물을 넣고 끓여요. 다 익어서 향신료를 넣어요. 집에서 달을 만들면 따뜻하고 맛있어서 좋아요.">
+ <div class="num">VLOG 06</div>
+ <h3>Making dal</h3>
+ <div class="grammar"><b>Use grammar:</b> -고 있다 · -은/ㄴ 다음에 · -아서/어서</div>
+ <div class="korean">오늘은 달을 만들고 있어요. 먼저 렌틸을 씻은 다음에 물을 넣고 끓여요. 다 익어서 향신료를 넣어요. 집에서 달을 만들면 따뜻하고 맛있어서 좋아요[cite: 2].</div>
+ <div class="micro"><b>Key vocabulary:</b> 끓여요 · 넣고 · 넣어요 · 다 · 다음에 · 달을 · 따뜻하고 · 렌틸을 · 만들고 · 만들면 · 맛있어서 · 먼저 · 물을 · 씻은</div>
+ <button class="copybtn" onclick="copyText(this)">Copy Korean script</button>
+</article>
+<article class="script-card" data-search="Making rice -고 있다 -은/ㄴ 다음에 -을 수 있어요 지금 밥을 하고 있어요. 먼저 쌀을 씻은 다음에 물을 넣어요. 밥이 다 되면 바로 먹을 수 있어요. 집에서 밥을 만들면 편하고 맛있어요.">
+ <div class="num">VLOG 07</div>
+ <h3>Making rice</h3>
+ <div class="grammar"><b>Use grammar:</b> -고 있다 · -은/ㄴ 다음에 · -을 수 있어요</div>
+ <div class="korean">지금 밥을 하고 있어요. 먼저 쌀을 씻은 다음에 물을 넣어요. 밥이 다 되면 바로 먹을 수 있어요. 집에서 밥을 만들면 편하고 맛있어요[cite: 2].</div>
+ <div class="micro"><b>Key vocabulary:</b> 넣어요 · 다 · 다음에 · 되면 · 만들면 · 맛있어요 · 먹을 · 먼저 · 물을 · 바로 · 밥을 · 밥이 · 수 · 쌀을</div>
+ <button class="copybtn" onclick="copyText(this)">Copy Korean script</button>
+</article>
+<article class="script-card" data-search="Making roti -고 있다 -(으)려고 -는 것 오늘은 로티를 만들고 있어요. 밀가루를 준비하고 반죽을 하려고 해요. 저는 집에서 로티를 만드는 것을 좋아해요. 따뜻할 때 먹으면 정말 맛있어요.">
+ <div class="num">VLOG 08</div>
+ <h3>Making roti</h3>
+ <div class="grammar"><b>Use grammar:</b> -고 있다 · -(으)려고 · -는 것</div>
+ <div class="korean">오늘은 로티를 만들고 있어요. 밀가루를 준비하고 반죽을 하려고 해요. 저는 집에서 로티를 만드는 것을 좋아해요. 따뜻할 때 먹으면 정말 맛있어요[cite: 2].</div>
+ <div class="micro"><b>Key vocabulary:</b> 것을 · 따뜻할 · 때 · 로티를 · 만드는 · 만들고 · 맛있어요 · 먹으면 · 밀가루를 · 반죽을 · 오늘은 · 있어요 · 저는 · 정말</div>
+ <button class="copybtn" onclick="copyText(this)">Copy Korean script</button>
+</article>
+<article class="script-card" data-search="Making sabzi -고 있다 -아서/어서 -(으)니까 오늘은 야채로 사브지를 만들고 있어요. 먼저 야채를 씻어서 자르고 있어요. 가족이 같이 먹을 거니까 조금 많이 만들어요. 향신료를 넣으면 냄새가 정말 좋아요.">
+ <div class="num">VLOG 09</div>
+ <h3>Making sabzi</h3>
+ <div class="grammar"><b>Use grammar:</b> -고 있다 · -아서/어서 · -(으)니까</div>
+ <div class="korean">오늘은 야채로 사브지를 만들고 있어요. 먼저 야채를 씻어서 자르고 있어요. 가족이 같이 먹을 거니까 조금 많이 만들어요. 향신료를 넣으면 냄새가 정말 좋아요[cite: 2].</div>
+ <div class="micro"><b>Key vocabulary:</b> 가족이 · 같이 · 거니까 · 냄새가 · 넣으면 · 만들고 · 만들어요 · 많이 · 먹을 · 먼저 · 사브지를 · 씻어서 · 야채로 · 야채를</div>
+ <button class="copybtn" onclick="copyText(this)">Copy Korean script</button>
+</article>
+<article class="script-card" data-search="Cooking with spices -는 것 -아서/어서 -겠- 인도 요리에서 향신료를 사용하는 것을 좋아해요. 향신료를 넣어서 음식 냄새가 좋아져요. 오늘 음식도 맛있겠어요. 조금 매울 것 같지만 기대돼요.">
+ <div class="num">VLOG 10</div>
+ <h3>Cooking with spices</h3>
+ <div class="grammar"><b>Use grammar:</b> -는 것 · -아서/어서 · -겠-</div>
+ <div class="korean">인도 요리에서 향신료를 사용하는 것을 좋아해요. 향신료를 넣어서 음식 냄새가 좋아져요. 오늘 음식도 맛있겠어요. 조금 매울 것 같지만 기대돼요[cite: 2].</div>
+ <div class="micro"><b>Key vocabulary:</b> 같지만 · 것 · 것을 · 기대돼요 · 냄새가 · 넣어서 · 맛있겠어요 · 매울 · 사용하는 · 오늘 · 요리에서 · 음식 · 음식도 · 인도</div>
  <button class="copybtn" onclick="copyText(this)">Copy Korean script</button>
 </article>
 </div>
@@ -65,16 +147,30 @@ footer{border-top:1px solid var(--line);padding:20px;color:var(--muted);font-siz
 
 <section id="vocab" class="tabpage">
 <h2>🏠 Home + Indian Cooking Vocabulary</h2>
+<p class="small">This section is designed around everyday home vlogging and Indian cooking vlogs[cite: 2].</p>
+<h2>🏠 Around the House</h2>
 <div class="vocab-grid">
-<div class="vocab-card"><h3>Rooms & areas</h3><div class="chips"><span class="chip">집</span><span class="chip">방</span><span class="chip">거실</span><span class="chip">주방</span></div></div>
+<div class="vocab-card"><h3>Rooms &amp; areas</h3><div class="chips"><span class="chip">집</span><span class="chip">방</span><span class="chip">침실</span><span class="chip">거실</span><span class="chip">주방</span><span class="chip">부엌</span><span class="chip">욕실</span><span class="chip">화장실</span><span class="chip">베란다</span><span class="chip">현관</span><span class="chip">복도</span><span class="chip">책상</span><span class="chip">침대</span></div></div>
+<div class="vocab-card"><h3>Home objects</h3><div class="chips"><span class="chip">의자</span><span class="chip">탁자</span><span class="chip">소파</span><span class="chip">옷장</span><span class="chip">거울</span><span class="chip">시계</span><span class="chip">휴대폰</span><span class="chip">컴퓨터</span><span class="chip">노트북</span><span class="chip">책</span><span class="chip">공책</span><span class="chip">펜</span><span class="chip">가방</span><span class="chip">에어컨</span><span class="chip">선풍기</span><span class="chip">냉장고</span><span class="chip">전자레인지</span><span class="chip">세탁기</span><span class="chip">그릇</span><span class="chip">컵</span><span class="chip">숟가락</span><span class="chip">젓가락</span><span class="chip">냄비</span><span class="chip">프라이팬</span></div></div>
+<div class="vocab-card"><h3>Home actions</h3><div class="chips"><span class="chip">일어나다</span><span class="chip">자다</span><span class="chip">씻다</span><span class="chip">세수하다</span><span class="chip">샤워하다</span><span class="chip">양치하다</span><span class="chip">청소하다</span><span class="chip">정리하다</span><span class="chip">빨래하다</span><span class="chip">설거지하다</span><span class="chip">요리하다</span><span class="chip">먹다</span><span class="chip">마시다</span><span class="chip">쉬다</span><span class="chip">공부하다</span><span class="chip">읽다</span><span class="chip">쓰다</span><span class="chip">전화하다</span><span class="chip">영상을 찍다</span><span class="chip">영상을 편집하다</span><span class="chip">열다</span><span class="chip">닫다</span><span class="chip">켜다</span><span class="chip">끄다</span><span class="chip">사용하다</span></div></div>
+<div class="vocab-card"><h3>Indian cooking ingredients</h3><div class="chips"><span class="chip">쌀</span><span class="chip">밀가루</span><span class="chip">렌틸</span><span class="chip">달</span><span class="chip">콩</span><span class="chip">감자</span><span class="chip">토마토</span><span class="chip">양파</span><span class="chip">마늘</span><span class="chip">생강</span><span class="chip">고추</span><span class="chip">시금치</span><span class="chip">당근</span><span class="chip">मटर</span><span class="chip">दही</span><span class="chip">기름</span><span class="chip">소금</span><span class="chip">설탕</span><span class="chip">향신료</span><span class="chip">강황</span><span class="chip">고춧가루</span><span class="chip">후추</span><span class="chip">커민</span><span class="chip">고수</span><span class="chip">가람 마살라</span></div></div>
+<div class="vocab-card"><h3>Indian cooking actions</h3><div class="chips"><span class="chip">씻다</span><span class="chip">자르다</span><span class="chip">썰다</span><span class="chip">벗기다</span><span class="chip">섞다</span><span class="chip">넣다</span><span class="chip">빼다</span><span class="chip">끓이다</span><span class="chip">삶다</span><span class="chip">볶다</span><span class="chip">굽다</span><span class="chip">튀기다</span><span class="chip">데우다</span><span class="chip">간을 하다</span><span class="chip">반죽하다</span><span class="chip">뒤집다</span><span class="chip">식히다</span><span class="chip">담다</span><span class="chip">차리다</span></div></div>
+<div class="vocab-card"><h3>Indian dishes</h3><div class="chips"><span class="chip">달</span><span class="chip">달밥</span><span class="chip">로티</span><span class="chip">차파티</span><span class="chip">사브지</span><span class="chip">카레</span><span class="chip">밥</span><span class="chip">풀라우</span><span class="chip">파라타</span><span class="chip">사모사</span><span class="chip">파코라</span><span class="chip">차이</span></div></div>
 </div>
 </section>
 
 <section id="bhopal" class="tabpage">
 <h2>📍 Bhopal Vlog Vocabulary</h2>
+<p class="small">Use these words for personal Bhopal/day-in-my-life videos. Add exact place names when you want to make a specific location video[cite: 2].</p>
+<h2>Bhopal &amp; Local Life</h2>
+<div class="vocab-grid">
+<div class="vocab-card"><h3>Bhopal places</h3><div class="chips"><span class="chip">보팔</span><span class="chip">호수</span><span class="chip">호수 주변</span><span class="chip">시장</span><span class="chip">공원</span><span class="chip">길</span><span class="chip">동네</span><span class="chip">카페</span><span class="chip">식당</span><span class="chip">가게</span><span class="chip">학교</span><span class="chip">도서관</span><span class="chip">사원</span><span class="chip">버스 정류장</span><span class="chip">기차역</span></div></div>
+<div class="vocab-card"><h3>Bhopal vlog words</h3><div class="chips"><span class="chip">보팔에서</span><span class="chip">우리 동네</span><span class="chip">집 근처</span><span class="chip">자주 가다</span><span class="chip">가까워요</span><span class="chip">멀어요</span><span class="chip">조용해요</span><span class="chip">복잡해요</span><span class="chip">덥다</span><span class="chip">비가 오다</span><span class="chip">날씨</span><span class="chip">아침</span><span class="chip">저녁</span><span class="chip">주말</span><span class="chip">산책하다</span><span class="chip">구경하다</span><span class="chip">쇼핑하다</span></div></div>
+</div>
 <div class="card">
 <h3>Example Bhopal vlog</h3>
-<div class="korean">안녕하세요. 오늘은 제가 사는 보팔의 일상을 보여 드릴게요[cite: 2].</div>
+<div class="grammar"><b>Grammar:</b> -는 N · -(으)면 · -아/어서 · -고 있다</div>
+<div class="korean">안녕하세요. 오늘은 제가 사는 보팔의 일상을 보여 드릴게요. 제가 자주 가는 곳은 집 근처에 있는 시장과 공원이에요. 시간이 있으면 동네를 걸어요. 오늘은 날씨가 좋아서 밖에서 조금 걸어 보려고 해요[cite: 2].</div>
 </div>
 </section>
 
@@ -82,15 +178,26 @@ footer{border-top:1px solid var(--line);padding:20px;color:var(--muted);font-siz
 <h2>🧱 Personal Vlog Script Builder</h2>
 <div class="card">
 <h3>1. Topic</h3><input id="topic" class="search" placeholder="Example: My evening at home">
+<h3>2. Grammar to use</h3><input id="grammar" class="search" placeholder="Example: -고 있다, -(으)ㄴ 다음에, -(으)려고">
 <h3>3. Your Korean script</h3>
 <textarea id="script" placeholder="안녕하세요. 오늘은 ..."></textarea><br><br>
 <button class="primary" onclick="saveBuilder()">Save my script</button>
+<button onclick="clearBuilder()">Clear</button>
 <p id="msg" class="small"></p>
+</div>
+<div class="card">
+<h3>Simple vlog structure</h3>
+<p><b>① Hook:</b> 안녕하세요. 오늘은 ___에 대해서 이야기해 볼게요.</p>
+<p><b>② Now:</b> 지금 저는 ___하고 있어요.</p>
+<p><b>③ Sequence:</b> ___한 다음에 ___해요.</p>
+<p><b>④ Purpose:</b> ___하려고 ___해요.</p>
+<p><b>⑤ Personal detail:</b> 저는 ___하는 것을 좋아해요.</p>
+<p><b>⑥ Ending:</b> 오늘 영상은 여기까지예요. 다음 영상에서 만나요!</p>
 </div>
 </section>
 </main>
 
-<footer><div class="wrap">Sogang Korean 2A + 2B grammar/vocabulary basis[cite: 2].</div></footer>
+<footer><div class="wrap">Sogang Korean 2A + 2B grammar/vocabulary basis • Vlog scripts are original practice extensions • Designed for GitHub Pages.</div></footer>
 
 <script>
 const tabs=[...document.querySelectorAll('.tab')];
@@ -113,6 +220,10 @@ keys.forEach(k=>{const el=document.getElementById(k); if(el) el.value=localStora
 function saveBuilder(){
  keys.forEach(k=>{const el=document.getElementById(k); if(el) localStorage.setItem('vlog_'+k,el.value)});
  document.getElementById('msg').textContent='Saved on this device ✓';
+}
+function clearBuilder(){
+ keys.forEach(k=>{const el=document.getElementById(k); if(el) {el.value='';localStorage.removeItem('vlog_'+k)}});
+ document.getElementById('msg').textContent='Cleared.';
 }
 </script>
 </body>
