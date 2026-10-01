@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Korean Vlog Studio — Sogang 2A + 2B</title>
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--ink:#17202a;--muted:#687384;--line:#e1e6ed;--accent:#6d4aff;--soft:#f0edff;--green:#11966f}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Noto Sans,sans-serif;line-height:1.6}
+.wrap{max-width:1180px;margin:auto;padding:18px 20px} header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
+.badge{font-size:12px;font-weight:800;color:#4c37b9;background:var(--soft);padding:5px 9px;border-radius:99px} h1{font-size:clamp(26px,4vw,42px);margin:8px 0 3px} .sub{color:var(--muted)}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px} nav button{border:1px solid var(--line);background:#fff;border-radius:10px;padding:9px 12px;font-weight:700;cursor:pointer} nav button.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+main{max-width:1180px;margin:auto;padding:24px 20px 70px} .tabpage{display:none} .tabpage.active{display:block}
+.hero{background:linear-gradient(135deg,#fff,#f0edff);border:1px solid var(--line);border-radius:20px;padding:25px;box-shadow:0 8px 24px rgba(25,30,40,.07)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px} .vocab-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px}
+.vocab-card,.card,.script-card{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:16px;box-shadow:0 7px 20px rgba(25,30,40,.05);margin:12px 0}
+.chips{display:flex;flex-wrap:wrap;gap:6px} .chip{background:#f3f5f8;border:1px solid var(--line);border-radius:999px;padding:4px 8px;font-size:13px}
+.search{width:100%;padding:12px;border:1px solid var(--line);border-radius:11px;font-size:16px;margin:10px 0 15px}
+.script-card .num{font-size:12px;font-weight:900;color:var(--accent)} .script-card h3{margin:4px 0 8px;font-size:21px}
+.grammar{background:#f1fbf7;border-left:4px solid var(--green);padding:9px 11px;border-radius:7px;margin-bottom:11px}
+.korean{font-size:18px;background:#fafafa;border:1px solid var(--line);padding:13px;border-radius:10px}
+.micro{color:var(--muted);font-size:13px;margin:9px 0} .copybtn,.primary{background:var(--accent);color:white;border:0;border-radius:9px;padding:9px 12px;font-weight:700;cursor:pointer}
+textarea{width:100%;min-height:170px;border:1px solid var(--line);border-radius:10px;padding:12px;font:inherit}
+.small{font-size:13px;color:var(--muted)}
+@media(max-width:650px){nav button{flex:1 1 45%} .korean{font-size:16px}}
+footer{border-top:1px solid var(--line);padding:20px;color:var(--muted);font-size:12px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<span class="badge">SOGANG KOREAN 2A + 2B • VLOG ONLY</span>
+<h1>🇰🇷 Korean Vlog Speaking Studio</h1>
+<div class="sub">90+ ready scripts • grammar for every topic • home vocabulary • Indian cooking • Bhopal vocabulary</div>
+<nav>
+<button class="tab active" data-page="home">Home</button>
+<button class="tab" data-page="scripts">90+ Scripts</button>
+<button class="tab" data-page="vocab">Home & Cooking</button>
+<button class="tab" data-page="bhopal">Bhopal</button>
+<button class="tab" data-page="builder">Script Builder</button>
+</nav>
+</div></header>
+
+<main>
+<section id="home" class="tabpage active">
+<div class="hero">
+<h2>🎥 Built for your vlog — not for homework</h2>
+<p>Choose a topic, see the exact Sogang grammar to use, read the complete Korean script, learn the vocabulary, then record your own version.</p>
+<p><b>Every script is original speaking practice.</b> The textbook is used as the grammar/vocabulary basis; the vlog scripts are an extension created for speaking practice.</p>
+</div>
+</section>
+
+<section id="scripts" class="tabpage">
+<h2>🎬 Vlog Scripts</h2>
+<input id="scriptSearch" class="search" placeholder="Search: cooking, home, Bhopal, -고 있다…">
+<div id="scriptList">
+<article class="script-card" data-search="My morning at home -고 있다">
+ <div class="num">VLOG 01</div>
+ <h3>My morning at home</h3>
+ <div class="grammar"><b>Use grammar:</b> -고 있다 · -(으)ㄴ 다음에 · -(으)려고</div>
+ <div class="korean">안녕하세요. 오늘은 집에서 보내는 제 아침을 보여 드릴게요. 저는 아침에 일어나서 먼저 세수를 해요[cite: 2].</div>
+ <button class="copybtn" onclick="copyText(this)">Copy Korean script</button>
+</article>
+</div>
+</section>
+
+<section id="vocab" class="tabpage">
+<h2>🏠 Home + Indian Cooking Vocabulary</h2>
+<div class="vocab-grid">
+<div class="vocab-card"><h3>Rooms & areas</h3><div class="chips"><span class="chip">집</span><span class="chip">방</span><span class="chip">거실</span><span class="chip">주방</span></div></div>
+</div>
+</section>
+
+<section id="bhopal" class="tabpage">
+<h2>📍 Bhopal Vlog Vocabulary</h2>
+<div class="card">
+<h3>Example Bhopal vlog</h3>
+<div class="korean">안녕하세요. 오늘은 제가 사는 보팔의 일상을 보여 드릴게요[cite: 2].</div>
+</div>
+</section>
+
+<section id="builder" class="tabpage">
+<h2>🧱 Personal Vlog Script Builder</h2>
+<div class="card">
+<h3>1. Topic</h3><input id="topic" class="search" placeholder="Example: My evening at home">
+<h3>3. Your Korean script</h3>
+<textarea id="script" placeholder="안녕하세요. 오늘은 ..."></textarea><br><br>
+<button class="primary" onclick="saveBuilder()">Save my script</button>
+<p id="msg" class="small"></p>
+</div>
+</section>
+</main>
+
+<footer><div class="wrap">Sogang Korean 2A + 2B grammar/vocabulary basis[cite: 2].</div></footer>
+
+<script>
+const tabs=[...document.querySelectorAll('.tab')];
+tabs.forEach(b=>b.onclick=()=>{
+ tabs.forEach(x=>x.classList.remove('active')); b.classList.add('active');
+ document.querySelectorAll('.tabpage').forEach(p=>p.classList.remove('active'));
+ document.getElementById(b.dataset.page).classList.add('active');
+ window.scrollTo({top:0,behavior:'smooth'});
+});
+document.getElementById('scriptSearch').oninput=e=>{
+ const q=e.target.value.toLowerCase().trim();
+ document.querySelectorAll('.script-card').forEach(c=>c.style.display=(!q||c.innerText.toLowerCase().includes(q))?'block':'none');
+};
+function copyText(btn){
+ const text=btn.parentElement.querySelector('.korean').innerText;
+ navigator.clipboard.writeText(text).then(()=>{btn.textContent='Copied ✓';setTimeout(()=>btn.textContent='Copy Korean script',1200)});
+}
+const keys=['topic','grammar','script'];
+keys.forEach(k=>{const el=document.getElementById(k); if(el) el.value=localStorage.getItem('vlog_'+k)||''});
+function saveBuilder(){
+ keys.forEach(k=>{const el=document.getElementById(k); if(el) localStorage.setItem('vlog_'+k,el.value)});
+ document.getElementById('msg').textContent='Saved on this device ✓';
+}
+</script>
+</body>
+</html>
